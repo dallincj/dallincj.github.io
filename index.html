@@ -49,14 +49,24 @@
     gap: 0.6rem;
     position: relative;
   }
-  .nav-logo-watermark {
+  /*.nav-logo-watermark {
     position: absolute;
     left: 0;
     height: 48px;
     width: auto;
     opacity: 0.95;
     pointer-events: none;
-  }
+  }*/
+ .image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensures the container spans the full width of the screen */
+}
+
+.image-container img {
+  max-width: 100%; /* Prevents the image from being wider than the screen on mobile */
+  height: auto; /* Maintains the image's aspect ratio */
+}
   .nav-logo-text {
     font-family: var(--font-display);
     font-size: 1.9rem;
@@ -337,9 +347,12 @@
 
 <nav>
   <div class="nav-logo">
-    <img class="nav-logo-watermark" src="GRUBZ_white.png">
+    <!--<img class="nav-logo-watermark" src="GRUBZ_white.png">-->
    <span class="nav-logo-text">GRUBZ</span>
   </div>
+  <div class="image-container">
+  <img src="GRUBZ_white.jpg" alt="grubz logo in white">
+ </div>
   <ul class="nav-links">
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#pricing">Pricing</a></li>
