@@ -49,6 +49,16 @@
     gap: 0.6rem;
     position: relative;
   }
+ .image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensures the container spans the full width of the screen */
+}
+
+.image-container img {
+  max-width: 100%; /* Prevents the image from being wider than the screen on mobile */
+  height: auto; /* Maintains the image's aspect ratio */
+}
   .nav-logo-watermark {
     position: absolute;
     left: 0;
@@ -337,8 +347,10 @@
 
 <nav>
   <div class="nav-logo">
-    <img class="nav-logo-watermark" src="GRUBZ_white.png">
    <span class="nav-logo-text">GRUBZ</span>
+  </div>
+  <div class="image-container">
+      <img class="nav-logo-watermark" src="GRUBZ_white.png">
   </div>
   <ul class="nav-links">
     <li><a href="#gallery">Gallery</a></li>
