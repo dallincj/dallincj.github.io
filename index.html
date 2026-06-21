@@ -56,17 +56,26 @@
     width: auto;
     opacity: 0.95;
     pointer-events: none;
-  }*/
+  }
  .image-container {
   display: flex;
   justify-content: center;
   width: 100%; /* Ensures the container spans the full width of the screen */
+
+/*.image-container img {
+  max-width: 12%; 
+  height: auto; /* Maintains the image's aspect ratio */
+ /* THE CENTERED IMAGE */
+nav > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centers the image perfectly relative to itself */
+  height: 40px;                      /* Adjust height as needed */
+  width: auto;
+  pointer-events: none;              /* Optional: allows clicks to pass through to items underneath */
 }
 
-.image-container img {
-  max-width: 20%; /* Prevents the image from being wider than the screen on mobile */
-  height: auto; /* Maintains the image's aspect ratio */
-}
   .nav-logo-text {
     font-family: var(--font-display);
     font-size: 1.9rem;
@@ -350,9 +359,7 @@
     <!--<img class="nav-logo-watermark" src="GRUBZ_white.png">-->
    <span class="nav-logo-text">GRUBZ</span>
   </div>
-  <div class="image-container">
   <img src="GRUBZ_white.png" alt="grubz logo">
- </div>
   <ul class="nav-links">
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#pricing">Pricing</a></li>
